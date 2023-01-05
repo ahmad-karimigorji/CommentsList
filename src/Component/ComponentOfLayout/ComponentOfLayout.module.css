@@ -1,34 +1,37 @@
-header{
-    background-color: #ccc;
-
+header {
+  background-color: #ccc;
+  width: 100%;
 }
 
-nav ul{
-    display: flex;
+nav ul {
+  display: flex;
+}
+li {
+  list-style: none;
+}
+li * {
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  color: #000;
+  font-weight: bold;
+}
+.activeLink,
+.hoverLink:hover {
+  background-color: #000;
+  color: #fff;
+}
 
+footer {
+  width: 100%;
+  background-color: #ccc;
 }
-li{
-    list-style: none;
+footer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
 }
-li *{
-    padding: 10px 20px;
-    text-decoration: none;
-    display: block;
-    color: #000;
-    font-weight: bold;
-}
-.activeLink, .hoverLink:hover{
-    background-color: #000;
-    color: #fff;
-}
-
-footer{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 10px;
-    position: fixed;
-    bottom: 0;
-    background-color: #ccc;
+footer a {
+  color: #000;
 }

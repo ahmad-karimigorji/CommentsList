@@ -1,10 +1,13 @@
-import styles from "./ComponentOfLayout.module.css"
+import "../../App.css";
 const Footer = () => {
-    return ( 
-        <footer>
-            <h2>This is Footer</h2>
-        </footer>
-     );
-}
- 
+  return (
+    <footer>
+      <div className="container">
+        <span>GitHub : </span>
+        <a href="https://github.com/ahmad-karimigorji"> ahmad-karimigorj</a>
+      </div>
+    </footer>
+  );
+};
+
 export default Footer;

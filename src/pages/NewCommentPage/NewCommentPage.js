@@ -1,7 +1,12 @@
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import postComment from "../../services/postCommentService";
 import styles from "./NewCommentPage.module.css";
 
-const NewCommentPage = ({ onAddPost }) => {
+const NewCommentPage = () => {
+  const navigate = useNavigate();
   const [comment, setComment] = useState({
     name: "",
     email: "",
@@ -14,7 +19,7 @@ const NewCommentPage = ({ onAddPost }) => {
     setComment({ ...comment, [e.target.name]: e.target.value });
   };
 
-  const addCommentHandler = () => {
+  const addCommentHandler = async () => {
     for (const key in comment) {
       if (!comment[key].trim()) {
         errorRef.current.innerText = `${key} is empty.`;
@@ -22,9 +27,14 @@ const NewCommentPage = ({ onAddPost }) => {
       }
     }
 
-    onAddPost(comment);
+    try {
+      await postComment({ ...comment, postId: 10 });
+      navigate("/");
+      toast.success("create comment.");
+    } catch (error) {
+      console.log(error);
+    }
 
-    errorRef.current.innerText = ``;
     setComment({
       name: "",
       email: "",
@@ -32,7 +42,7 @@ const NewCommentPage = ({ onAddPost }) => {
     });
   };
   return (
-    <div className={styles.newComment}>
+    <div className={`container ${styles.newComment}`}>
       <h2>Add New Comment</h2>
       <div>
         <label>name</label>

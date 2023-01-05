@@ -1,8 +1,30 @@
 .App {
+  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   /* background-color: #282c34; */
-  width: 500px;
+  /* width: 320px; */
+  min-height: 100vh;
   margin: 0 auto;
+}
+.container {
+  width: 320px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 500px) {
+  .container {
+    width: 500px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .container {
+    width: 800px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 1024px;
+  }
 }

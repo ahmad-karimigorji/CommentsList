@@ -1,8 +1,8 @@
 import styles from "./Commnet.module.css";
 
-const Comment = ({ comments, onClick }) => {
+const Comment = ({ comments }) => {
   return (
-    <div className={styles.comment} onClick={onClick}>
+    <div className={styles.comment}>
       <p>name:</p>
       <p>{comments.name}</p>
       <p>email:</p>
