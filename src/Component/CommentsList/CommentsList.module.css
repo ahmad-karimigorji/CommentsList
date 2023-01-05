@@ -1,0 +1,34 @@
+.container{
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 20px 0;
+}
+.comments{
+    justify-content: initial;
+    overflow-x: auto;
+    padding: 05px 10px;
+}
+.commentsColor{
+    background-color: #ede9fe;
+    color: #6366f1;
+}
+.comments > p{
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+
+}
+.error{
+    color: red;
+}

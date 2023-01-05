@@ -1,0 +1,32 @@
+{
+  "comments": [
+    {
+      "name": "reza",
+      "email": "reza@test.com",
+      "body": "this ljki  teiah a  fdf hie  ahfd.",
+      "postId": 10,
+      "id": 6
+    },
+    {
+      "name": "ehsan",
+      "email": "tirbandy@yahoo.com",
+      "body": "cooooooomment",
+      "postId": 10,
+      "id": 10
+    },
+    {
+      "name": "ali",
+      "email": "ali@yahoo.com",
+      "body": "cooooooomment",
+      "postId": 10,
+      "id": 10
+    },
+    {
+      "name": "ahmad",
+      "email": "ahmad@yahoo.com",
+      "body": "cooooooomment",
+      "postId": 10,
+      "id": 10
+    }
+  ]
+}
